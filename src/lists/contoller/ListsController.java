@@ -1,5 +1,9 @@
 package lists.contoller;
 
-public class ListsController {
-
+public class ListsController 
+{
+	public void start()
+	{
+		
+	}
 }
