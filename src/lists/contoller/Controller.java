@@ -20,6 +20,8 @@ public class Controller
 	
 	public void start()
 	{
+//		This is where you add methods into the start method
+		
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
 		fillTheList();
