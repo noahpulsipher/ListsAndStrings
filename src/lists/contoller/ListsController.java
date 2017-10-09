@@ -114,4 +114,14 @@ public class ListsController
 		popup.displayText("I removed " + remove.getCreator() + "'s kahoot about eclipse because eclipse machine broke.");
 
 	}
+	
+	public PopupDisplay getPopup()
+	{
+		return popup;
+	}
+	
+	public ArrayList<Kahoot> getMyKahoots()
+	{
+		return (ArrayList<Kahoot>) myKahoots;
+	}
 }
