@@ -111,8 +111,7 @@ public class ListsController
 		popup.displayText("Why? Because he is toxic.");
 		
 		Kahoot remove = myKahoots.remove(7);
-		popup.displayText("I romoved " + remove.getCreator() + "'s kahoot about eclipse because eclipse machine broke.");
-		
+		popup.displayText("I removed " + remove.getCreator() + "'s kahoot about eclipse because eclipse machine broke.");
 
 	}
 }
