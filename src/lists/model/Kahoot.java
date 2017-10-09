@@ -25,6 +25,8 @@ public class Kahoot
 		this.topic = topic;
 	}
 	
+//	Getters are public so they can be accessed
+	
 	public String toString()
 	{
 		String description = "This Kahoot was made by " + creator + " and has " + questionCount + " questions";

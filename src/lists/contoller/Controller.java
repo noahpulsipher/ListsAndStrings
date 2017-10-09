@@ -118,6 +118,7 @@ public class Controller
 		popup.displayText("I removed " + remove.getCreator() + "'s kahoot about eclipse because eclipse machine broke.");
 		
 		
+		
 
 	}
 	
