@@ -101,16 +101,18 @@ public class ListsController
 		Kahoot practice = new Kahoot("Noah", 10, "Practice lists");
 		Kahoot eclipse = new Kahoot("Noah", 15, "Why is my eclipse broken?");
 		Kahoot dumb = new Kahoot("Jian", 10, "Why is Jian a dumb guy?");
+		
 		myKahoots.add(dumb);
 		myKahoots.add(eclipse);
 		myKahoots.add(practice);
 		
 		Kahoot removed = myKahoots.remove(6);
 		popup.displayText("Oops, I removed " + removed.getCreator() + ", the dumb guy.");
-		popup.displayText("Why? Because he is toxic");
+		popup.displayText("Why? Because he is toxic.");
 		
+		Kahoot remove = myKahoots.remove(7);
+		popup.displayText("I romoved " + remove.getCreator() + "'s kahoot about eclipse because eclipse machine broke.");
 		
-		
+
 	}
-	
 }
