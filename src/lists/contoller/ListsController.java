@@ -23,10 +23,13 @@ public class ListsController
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
 		fillTheList();
-		showTheList();
+//		showTheList();
+		changeTheList();
 	}
 	
+	
 	private void showTheList()
+
 	{
 		String currentCreator = "";
 		for (int index = 0; index < myKahoots.size(); index += 1)
@@ -77,5 +80,18 @@ public class ListsController
 		myKahoots.add(bigQuiz);
 		myKahoots.add(animalColor);
 		myKahoots.add(presidents);
+		
+	}
+	private void changeTheList()
+	{
+		popup.displayText("The current list size is: " + myKahoots.size());
+		Kahoot removed = myKahoots.remove(3);
+		popup.displayText("I removed the Kahoot by " + removed.getCreator());
+		myKahoots.add(0, removed);
+		
+		popup.displayText("The list is still: " + myKahoots.size() + " items big.");
+		removed = myKahoots.set(2, new Kahoot());
+		popup.displayText("The kahoot by " + removed.getCreator() + " was replaced with " + myKahoots.get(2).getCreator());
+	
 	}
 }
