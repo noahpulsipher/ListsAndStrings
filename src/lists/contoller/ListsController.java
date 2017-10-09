@@ -24,7 +24,8 @@ public class ListsController
 		myKahoots.add(myFirstKahoot);
 		fillTheList();
 //		showTheList();
-		changeTheList();
+//		changeTheList();
+		practiceTheList();
 	}
 	
 	
@@ -80,7 +81,7 @@ public class ListsController
 		myKahoots.add(bigQuiz);
 		myKahoots.add(animalColor);
 		myKahoots.add(presidents);
-		
+
 	}
 	private void changeTheList()
 	{
@@ -92,6 +93,24 @@ public class ListsController
 		popup.displayText("The list is still: " + myKahoots.size() + " items big.");
 		removed = myKahoots.set(2, new Kahoot());
 		popup.displayText("The kahoot by " + removed.getCreator() + " was replaced with " + myKahoots.get(2).getCreator());
-	
+		
 	}
+	
+	private void practiceTheList()
+	{
+		Kahoot practice = new Kahoot("Noah", 10, "Practice lists");
+		Kahoot eclipse = new Kahoot("Noah", 15, "Why is my eclipse broken?");
+		Kahoot dumb = new Kahoot("Jian", 10, "Why is Jian a dumb guy?");
+		myKahoots.add(dumb);
+		myKahoots.add(eclipse);
+		myKahoots.add(practice);
+		
+		Kahoot removed = myKahoots.remove(6);
+		popup.displayText("Oops, I removed " + removed.getCreator() + ", the dumb guy.");
+		popup.displayText("Why? Because he is toxic");
+		
+		
+		
+	}
+	
 }
