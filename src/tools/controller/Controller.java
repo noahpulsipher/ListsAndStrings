@@ -8,9 +8,10 @@ import tools.view.PopupDisplay;
 
 public class Controller 
 {
-	// Creates your list.
+//  Creates your list.
 	
 	private List<Kahoot> myKahoots;
+	
 	private PopupDisplay popup;
 	
 	public Controller()
@@ -30,7 +31,6 @@ public class Controller
 //		changeTheList();
 		practiceTheList();
 	}
-	
 	
 	private void showTheList()
 
@@ -86,6 +86,7 @@ public class Controller
 		myKahoots.add(presidents);
 
 	}
+	
 	private void changeTheList()
 	{
 		popup.displayText("The current list size is: " + myKahoots.size());
@@ -99,11 +100,40 @@ public class Controller
 		
 	}
 	
+	public int findMaxLength(ArrayList<String> myList)
+	{
+		int max = 0;
+		
+		for (int index = 0; index < myList.size(); index ++)
+		{
+			if (myList.get(index).length() > max)
+			{
+				max = myList.get(index).length();
+			}
+		}
+		
+		return max;
+	}
+	
+	public int findMinLength(ArrayList<String> myList)
+	{
+		int min = Integer.MAX_VALUE;
+		
+		for (int index = 0; index < myList.size(); index++)
+		{
+			if (myList.get(index).length() < min)
+			{
+				min = myList.get(index).length();
+			}
+		}
+		return min;
+	}
+	
 	private void practiceTheList()
 	{
 		Kahoot practice = new Kahoot("Noah", 10, "Practice lists");
 		Kahoot eclipse = new Kahoot("Noah", 15, "Why is my eclipse broken?");
-		Kahoot dumb = new Kahoot("Jian", 10, "Why is Jian a dumb guy?");
+		Kahoot dumb = new Kahoot("Jian", 10, "Why is Jian a cool guy?");
 		Kahoot fun = new Kahoot("Noah", 5, "Fun quiz");
 		
 		myKahoots.add(dumb);
@@ -112,12 +142,11 @@ public class Controller
 		myKahoots.add(fun);
 		
 		Kahoot removed = myKahoots.remove(6);
-		popup.displayText("Oops, I removed " + removed.getCreator() + ", the dumb guy.");
+		popup.displayText("Oops, I removed " + removed.getCreator() + ", the cool guy.");
 		popup.displayText("Why? Because he is toxic.");
 		
 		Kahoot remove = myKahoots.remove(7);
 		popup.displayText("I removed " + remove.getCreator() + "'s kahoot about eclipse because eclipse machine broke.");
-
 	}
 	
 	public PopupDisplay getPopup()
