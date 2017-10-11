@@ -1,4 +1,4 @@
-package tools.contoller;
+package tools.controller;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -26,9 +26,9 @@ public class Controller
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
 		fillTheList();
-	    showTheList();
-		changeTheList();
-//		practiceTheList();
+//	    showTheList();
+//		changeTheList();
+		practiceTheList();
 	}
 	
 	
