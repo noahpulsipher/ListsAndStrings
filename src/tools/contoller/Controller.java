@@ -1,9 +1,10 @@
-package lists.contoller;
+package tools.contoller;
 
 import java.util.List;
 import java.util.ArrayList;
-import lists.model.Kahoot;
-import lists.view.PopupDisplay;
+
+import tools.model.Kahoot;
+import tools.view.PopupDisplay;
 
 public class Controller 
 {
@@ -25,9 +26,9 @@ public class Controller
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
 		fillTheList();
-//		showTheList();
-//		changeTheList();
-		practiceTheList();
+	    showTheList();
+		changeTheList();
+//		practiceTheList();
 	}
 	
 	
@@ -116,9 +117,6 @@ public class Controller
 		
 		Kahoot remove = myKahoots.remove(7);
 		popup.displayText("I removed " + remove.getCreator() + "'s kahoot about eclipse because eclipse machine broke.");
-		
-		
-		
 
 	}
 	

@@ -1,4 +1,4 @@
-package lists.model;
+package tools.model;
 
 public class Kahoot
 {
